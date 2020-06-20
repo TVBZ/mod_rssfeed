@@ -1,0 +1,20 @@
+<updates>
+	<update>
+		<name>RSS feed</name>
+		<description>A lightweight module to display RSS feed from any source.</description>
+		<element>mod_rssfeed</element>
+		<type>module</type>
+		<version>1.0.0</version>
+		<infourl title="Joomla!">https://github.com/TVBZ/mod_rssfeed</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/TVBZ/mod_rssfeed/archive/master.zip</downloadurl>
+		</downloads>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer>Tom F. Vanbrabant a.k.a. TVBZ</maintainer>
+		<maintainerurl>https://github.com/TVBZ</maintainerurl>
+		<targetplatform name="joomla" version="3.[0123456789]" />
+		<php_minimum>5.6</php_minimum>
+    </update>
+</updates>
