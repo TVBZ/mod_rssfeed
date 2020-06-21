@@ -19,18 +19,18 @@
         <folder>helpers</folder>
     </files>
     <updateservers>
-        <server type="extension" priority="1" name="Directory Carousel">https://github.com/TVBZ/mod_rssfeed/blob/master/update.xml</server>
+        <server type="extension" priority="1" name="RSS Feed">https://github.com/TVBZ/mod_rssfeed/blob/master/update.xml</server>
     </updateservers>
     <config>
         <fields name="params">
 		<fieldset name="basic">
               <field
-                    name="url"
+                    name="source"
                     type="text"
                     required="true"
                     label="Feed url"
                     description=""
-                    default="https://www.verzekeringsnieuws.nl/rss/algemeen.xml"
+                    default="http://feeds.feedburner.com/JoomlaAnnouncements?format=xml"
               />
 
               <field 
@@ -40,15 +40,39 @@
                      label=""/>           
 
                <field 
-                     name="title" 
+                     name="channel" 
                      type="radio" 
                      required="true"
                      class="btn-group btn-group-yesno" 
                      default="1" 
-                     label="Show title" 
+                     label="Show channel title" 
+                     description="">
+                     <option value="0">JHIDE</option>
+                     <option value="1">JSHOW</option>
+               </field>
+
+               <field 
+                     name="linktitle" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Link feed title" 
                      description="">
                      <option value="0">JNO</option>
                      <option value="1">JYES</option>
+               </field>
+
+               <field 
+                     name="readmore" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Add read more" 
+                     description="">
+                     <option value="0">JHIDE</option>
+                     <option value="1">JSHOW</option>
                </field>
 
             </fieldset>

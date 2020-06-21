@@ -1,6 +1,7 @@
 <?php
+
 /**
- * @name        Directory Carousel
+ * @name        RSS Feed
  * @copyright	Copyright (C) 2020 All rights reserved
  * @license		GPLv3 or later; see https://github.com/TVBZ/mod_rssfeed/blob/master/LICENSE
  * @author		Tom F. Vanbrabant, a.k.a. TVBZ
@@ -17,7 +18,7 @@ defined('_JEXEC') or die;
 require_once dirname(__FILE__) . '/helpers/rss-helper.php';
 
 // Set some vars
-$rssFeed = rssHelper::getFeed($params);
+$rss = rssHelper::getFeed($params);
 
 // Call template file
 require JModuleHelper::getLayoutPath('mod_rssfeed');

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @name        Directory Carousel
+ * @name        RSS Feed
  * @copyright	Copyright (C) 2020 All rights reserved
  * @license		GPLv3 or later; see https://github.com/TVBZ/mod_rssfeed/blob/master/LICENSE
  * @author		Tom F. Vanbrabant, a.k.a. TVBZ
@@ -18,24 +18,13 @@ defined("_JEXEC") or die;
 class rssHelper
 {
 
-    // Get the feed from folder
+    // Get the feed
     public static function getFeed($params)
     {
 
-        $feed = "http://www.verzekeringsnieuws.nl/rss/algemeen.xml";
-        $rss = simplexml_load_file($feed);
+        $source = $params["source"];
+        $output = simplexml_load_file($source);
 
-        $html = '<h1>' . $rss->channel->title . '</h1>';
-
-        foreach ($rss->channel->item as $item) {
-            $html .= '<div>';
-            $html .= '<h2><a href="' . $item->link . '">' . $item->title . "</a></h2>";
-            $html .= "<p>" . $item->pubDate . "</p>";
-            $html .= "<p>" . $item->description . "</p>";
-            $html .= '<p><a href="' . $item->link . '" class="btn btn-primary">Read more...</a></p>';
-            $html .= '</div>';
-        }
-
-        return $html;
+        return $output;
     }
 }
