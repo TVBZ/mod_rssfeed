@@ -75,6 +75,18 @@
                      <option value="1">JSHOW</option>
                </field>
 
+               <field 
+                     name="target" 
+                     type="radio" 
+                     required="true"
+                     class="btn-group btn-group-yesno" 
+                     default="1" 
+                     label="Open in new tab" 
+                     description="">
+                     <option value="0">JNO</option>
+                     <option value="1">JYES</option>
+               </field>
+
             </fieldset>
             
        </fields>

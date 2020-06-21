@@ -31,7 +31,7 @@ $document->addStyleSheet(Uri::root(true)."/modules/mod_rssfeed/assets/css/styles
 
         <h2>
             <?php if ($params["linktitle"] == "1") : ?>
-            <a href="<?php echo $item->link; ?>">
+            <a href="<?php echo $item->link; ?>" target="<?php echo $params["target"]; ?>" title="<?php echo $item->link; ?>">  
                 <?php echo $item->title; ?>
             </a>
             <?php else : ?>
@@ -45,7 +45,7 @@ $document->addStyleSheet(Uri::root(true)."/modules/mod_rssfeed/assets/css/styles
 
         <?php if ($params["readmore"] == "1") : ?>
         <p class="readmore" >
-            <a class="btn btn-primary" href="<?php echo $item->link; ?>">
+            <a class="btn btn-primary" href="<?php echo $item->link; ?>" target="<?php echo $params["target"]; ?>" title="<?php echo $item->link; ?>">
                 Read more...
             </a>
         </p>
