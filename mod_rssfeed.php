@@ -18,7 +18,8 @@ defined('_JEXEC') or die;
 require_once dirname(__FILE__) . '/helpers/rss-helper.php';
 
 // Set some vars
-$rss = rssHelper::getFeed($params);
+$the_feed = new RSS($params["source"]);
+$rss = $the_feed->feed;
 
 // Call template file
 require JModuleHelper::getLayoutPath('mod_rssfeed');

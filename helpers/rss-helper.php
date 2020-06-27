@@ -15,16 +15,14 @@
 defined("_JEXEC") or die;
 
 
-class rssHelper
+class RSS
 {
 
-    // Get the feed
-    public static function getFeed($params)
+    public $feed;
+
+    function __construct($source)
     {
-
-        $source = $params["source"];
-        $output = simplexml_load_file($source);
-
-        return $output;
+        $this->feed = simplexml_load_file($source);
     }
+
 }
