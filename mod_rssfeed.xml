@@ -19,7 +19,7 @@
         <folder>helpers</folder>
     </files>
     <updateservers>
-        <server type="extension" priority="1" name="RSS Feed">https://github.com/TVBZ/mod_rssfeed/blob/master/update.xml</server>
+        <server type="extension" priority="1" name="RSS Feed">https://raw.githubusercontent.com/TVBZ/mod_rssfeed/master/update.xml</server>
     </updateservers>
     <config>
         <fields name="params">
